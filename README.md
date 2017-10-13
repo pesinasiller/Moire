@@ -7,5 +7,4 @@ Generador de imágenes para hacer animaciones con el efecto moiré.
 Carga dos o más imágenes y exporta los resultados en PDF.
 
 Disponible desde:
-https://pesinasiller.github.io/moire/
-
+https://pesinasiller.github.io/Moire/
