@@ -142,8 +142,8 @@
  }
 
  function imagenes_muestra() {
-  img[0] = loadImage("/img/001.JPG");
-  img[1] = loadImage("/img/002.JPG", function() {
+  img[0] = loadImage("img/001.JPG");
+  img[1] = loadImage("img/002.JPG", function() {
    crear();
   });
  }
