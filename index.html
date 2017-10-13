@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+ <meta charset="utf-8">
+ <title>Moiré</title>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.0/p5.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+ <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.0/addons/p5.dom.js"></script>
+ <script type="text/javascript" src="js/p5.pdf.js"></script>
+ <script type="text/javascript" src="js/script.js"></script>
+ <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<div id="container_cargar_imagenes">
+ <div id="seccion_cargar_imagenes">
+  <h1>Moiré</h1>
+  <h3>Cargar imágenes</h3>
+  <div id="boton_cargar_imagenes">
+  </div>
+  <button id="boton_crear" onclick="crear()">Crear</button>
+  <br><br>
+  <button id="boton_crear" onclick="imagenes_muestra()">Usar imágenes de muestra</button>
+ </div>
+</div>
+<div id="seccion_cambiar_tamano">
+ <div id="container_slider"></div>
+ <button id="boton_cambiar_tamano" onclick="cambiar_tamano()">Cambiar tamaño de líneas</button>
+ <br><br>
+ <button id="boton_guardar_pdf" onclick="guardar_pdf()">Guardar PDFs</button>
+ <br><br>
+ <button onclick="location.reload();">Cargar otras imágenes</button>
+</div>
+
+<div id="resultado">
+ <div id='container_imagenes'></div>
+ <div id='container_rayas'></div>
+</div>
+
+</body>
+
+</html>

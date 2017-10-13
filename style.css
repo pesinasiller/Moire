@@ -1,0 +1,35 @@
+ body {
+  background-image: url('img/giphy.gif');
+  margin: 0px;
+  overflow-x: hidden;
+ }
+
+ #container_rayas {
+  position: absolute;
+  z-index: -40;
+ }
+
+ #container_imagenes {
+  position: absolute;
+  z-index: -50;
+ }
+
+ #seccion_cambiar_tamano {
+  display: none;
+  z-index: 50;
+  background-color: white;
+  padding: 20px;
+ }
+
+ #seccion_cargar_imagenes {
+  padding: 10%;
+  background-color: white;
+  border: 1px solid black;
+  width: 20%;
+  margin: auto;
+ }
+
+ #container_cargar_imagenes {
+  padding: 5%
+ }
+ 
