@@ -48,7 +48,6 @@
   r.img = img;
 
   r.preload = function() {
-   images = [];
    images = this.img;
 
   }
@@ -74,13 +73,18 @@
    var iteraciones = img[0].width / ancho;
    var fotogramas = img.length;
 
-   pg.strokeWeight(ancho / 2);
+   pg.strokeWeight(ancho / fotogramas);
 
    for (var x = 0; x < iteraciones; x++) {
     for (var y = 0; y < fotogramas; y++) {
      if (y != 0) {
       pg.stroke(0);
-      pg.line(fotogramas * x * ancho / 2 + (y * ancho / 2), 0, fotogramas * x * ancho / 2 + (y * ancho / 2), alto);
+      pg.line(
+       fotogramas * x * ancho / fotogramas + (y * ancho / fotogramas), 
+       0, 
+       fotogramas * x * ancho / fotogramas + (y * ancho / fotogramas), 
+       alto
+      );
      }
     }
 
@@ -92,7 +96,6 @@
  var imagenes = function(r) {
   r.img = img;
   r.preload = function() {
-   images = [];
    images = this.img;
   }
 
@@ -117,11 +120,20 @@
    var iteraciones = img[0].width / ancho;
    var fotogramas = img.length;
 
-   pg.strokeWeight(ancho / 2);
+   pg.strokeWeight(ancho / fotogramas);
 
    for (var x = 0; x < iteraciones; x++) {
     for (var y = 0; y < fotogramas; y++) {
-     r.copy(img[y], x * ancho, 0, ancho, alto, (fotogramas * x * (ancho / fotogramas) + (y * ancho / fotogramas)), 0, ancho, alto);
+     r.copy(
+      img[y], x * ancho, 
+      0, 
+      ancho, 
+      alto, 
+      (fotogramas * x * (ancho / fotogramas) + (y * ancho / fotogramas)), 
+      0, 
+      ancho, 
+      alto
+     );
     }
    }
    r.image(pg, 0, 0);
